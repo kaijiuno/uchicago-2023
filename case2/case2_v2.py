@@ -121,7 +121,7 @@ class OptionBot(UTCBot):
                                             pb.OrderSpecType.LIMIT,
                                             pb.OrderSpecSide.BID,
                                             1,  # How should this quantity be chosen?
-                                            ask.px  # How should this price be chosen?
+                                            float(ask.px)  # How should this price be chosen?
                                         )
                                     )
                     for bid in book.bids:
@@ -134,7 +134,7 @@ class OptionBot(UTCBot):
                                         pb.OrderSpecType.LIMIT,
                                         pb.OrderSpecSide.ASK,
                                         1,  # How should this quantity be chosen?
-                                        bid.px  # How should this price be chosen?
+                                        float(bid.px)  # How should this price be chosen?
                                     )
                                 )
 
