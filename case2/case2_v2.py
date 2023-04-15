@@ -51,7 +51,7 @@ class OptionBot(UTCBot):
 
         self.greek_limits = {
             "delta": 2000,
-            "gamma": 50000,
+            "gamma": 5000,
             "theta": 5000,
             "vega": 1000000
         }
