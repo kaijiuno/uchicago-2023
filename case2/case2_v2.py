@@ -125,7 +125,7 @@ class OptionBot(UTCBot):
                                         )
                                     )
                     for bid in book.bids:
-                        if float(bid.px) < proposed_prices[asset] and flag == "C":
+                        if float(bid.px) > proposed_prices[asset] and flag == "C":
                             if self.under_greek_threshold(strike, flag.lower(), self.cur_prices["SPY"], self.time_to_maturity(), vol[f"SPY{strike}{flag}"]):
                                 print(f"Appending: {asset} at {proposed_prices[asset] * 1.5}")
                                 requests.append(
